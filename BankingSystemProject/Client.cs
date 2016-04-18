@@ -15,7 +15,7 @@ namespace BankingSystemProject
 
         //fields
         private string name = "Lexus Davis";
-        private int accountNumber = 0;
+        private int accountNumber;
         
 
         //properties
@@ -33,16 +33,15 @@ namespace BankingSystemProject
         //methods
         public void Userinfo()
         {            
-            Console.WriteLine(this.name + " Account Number: " + this.accountNumber);
+            Console.WriteLine(this.Name + " Account Number: " + this.AccountNumber);
         }
 
         public Client()
         {
         }
-             public Client(string name, int accountNumber)
+        public Client(string name)
         {
-            Random accoutNumberGenerator = new Random(); //object instantiation
-            this.AccountNumber = accoutNumberGenerator.Next(100, 300);
+            
             this.Name = name;
         }
     
