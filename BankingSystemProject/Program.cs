@@ -15,29 +15,13 @@ namespace BankingSystemProject
             BankMenu();
             Swag();
             Account account = new Account();
-            Swag();
-           
-            
+            Swag();            
             Client accountNew = new Client();
-
+            //random number generator
             Random accoutNumberGenerator = new Random(); //object instantiation
             accountNew.AccountNumber = accoutNumberGenerator.Next(100000, 999999);
-
             int bankMenu = 0;
           
-            //string accountsummary = ("AccountSummary.txt");
-            //StreamWriter summary = new StreamWriter(accountsummary);
-            //using (summary)
-            //{
-            //    summary.WriteLine(DateTime.Now);
-            //    summary.WriteLine("Lexus C. M. Davis Banking");
-            //    summary.WriteLine("Swagger, USA");
-            //    Swag();
-            //    summary.WriteLine("Client Name: {0}",  accountNew.Name);
-            //    summary.WriteLine("Account Number: {0} ", accountNew.AccountNumber);
-            //    summary.WriteLine("Withdraw -: {0}", account.Balance);
-            //    summary.WriteLine("Deposit + : {0}", account.Balance);
-            //}
             do
             {
                 Console.WriteLine("If you want to pursue more than one transaction press the number that corresponds to what you want to do. \nEx: If you want to check balance press 2, if you want to Deposit money after checking balance press 3.");
@@ -51,8 +35,7 @@ namespace BankingSystemProject
                         //view client info
                         accountNew.Userinfo();
                         Swag();
-                        break;
-                        
+                        break;                       
                     case 2:
                         Console.WriteLine("\n" + accountNew.AccountNumber);
                         account.GetBalance();
@@ -60,13 +43,13 @@ namespace BankingSystemProject
                         break;
                     case 3:
                         account.Deposit();
-                        Console.WriteLine(account.Balance);
+                        Console.WriteLine(DateTime.Now);
                         account.GetBalance();
-                        Swag();
-                        
+                        Swag();                       
                         break;
                     case 4:
                         account.Withdraw();
+                        Console.WriteLine(DateTime.Now);
                         account.GetBalance();
                         Swag();
                         break;
@@ -90,16 +73,14 @@ namespace BankingSystemProject
                 summary.WriteLine("Swagger, USA");
                 Swag();
                 summary.WriteLine("Client Name: {0}", accountNew.Name);
+                
                 summary.WriteLine("Account Number: {0} ", accountNew.AccountNumber);
                 summary.WriteLine("Withdraw -: {0}", account.WithdrawAmount); 
                 summary.WriteLine("Deposit + : {0}", account.DepositAmount);
                 summary.WriteLine("Account Balance: {0}", account.Balance);
             }
         }
-
             //while (playAgain == "y");
-
-
 
         public static void BankMenu()
         {

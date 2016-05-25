@@ -11,15 +11,12 @@ namespace BankingSystemProject
         //client class
         //client name
         //client acct number
-        //random method to generate account number
+
 
         //fields
-        private string name = "Lexus Davis";
-        private int accountNumber;
-        
-
+        private string name = "Lexus Davis";             
+        private int accountNumber;        
         //properties
-
        public string Name
         {
             get { return this.name; }
@@ -33,20 +30,18 @@ namespace BankingSystemProject
         //methods
         public void Userinfo()
         {            
-            Console.WriteLine(this.Name + " Account Number: " + this.AccountNumber);
+            Console.WriteLine(this.Name + ": Your Account Number: " + this.AccountNumber);
         }
 
+        //constructor
         public Client()
         {
         }
         public Client(string name)
-        {
-            
+        {            
             this.Name = name;
         }
-    
-       
-           
+                      
         }
     }
 

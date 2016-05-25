@@ -9,26 +9,16 @@ namespace BankingSystemProject
     class Account
     {
         //accounts class
-        //each transaction with date and time (Date & Time Class)
         //+ for deposit 
         //- for withdraw
         //show transaction amount
         //show new balance
-        //Streamwriter and account summary
-        //public void AccountInfo()
-        
-            //fields
-           
+
+        //fields          
         double balance;
-        string firstName;
-        string lastName;
         double depositAmount;
-        double withdrawAmount;
-        
-
-        //properties
-        
-
+        double withdrawAmount;        
+        //properties        
         public double Balance
         {
             get { return this.balance; }
@@ -44,17 +34,7 @@ namespace BankingSystemProject
             get { return this.withdrawAmount; } 
             set { this.withdrawAmount = value; }
         }       
-        public string FirstName
-        {
-            get { return this.firstName; }
-            set { this.firstName = value; }
-        }
-        public string LastName
-        {
-            get { return this.lastName; } 
-            set { this.lastName = value; }
-        }
-       
+              
         //withdraw method
         public void Withdraw()
         {
@@ -72,13 +52,11 @@ namespace BankingSystemProject
             this.Balance += amount;
             this.DepositAmount = amount;       
         }
-
         //balance method
         public void GetBalance()
         {
             Console.WriteLine("Balance, ${0}", this.balance);
         }
-
         //constructor
         public Account()
         {
@@ -90,13 +68,11 @@ namespace BankingSystemProject
             this.WithdrawAmount = withdrawAmount;
         }
        
-        public Account(double balance, string firstName, string lastName)
-        {
-            
+        public Account(double balance)
+        {            
             this.Balance = balance;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            
+            //this.FirstName = firstName;
+            //this.LastName = lastName;            
         }
 
     }

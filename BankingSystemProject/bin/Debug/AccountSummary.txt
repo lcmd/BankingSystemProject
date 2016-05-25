@@ -1,8 +1,8 @@
-4/18/2016 5:03:31 PM
+5/25/2016 1:16:27 AM
 Lexus C. M. Davis Banking
 Swagger, USA
 Client Name: Lexus Davis
-Account Number: 944608 
-Withdraw -: 250
+Account Number: 470801 
+Withdraw -: 222
 Deposit + : 500
-Account Balance: 250
+Account Balance: 278
